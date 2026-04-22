@@ -9,7 +9,7 @@ Proyecto de la materia Modelizado de Sistemas IA.
 
 ## Integrantes
 - Arnaldo
-- Eze
+- Ezequias
 - Maxi
 
 ## Objetivo
