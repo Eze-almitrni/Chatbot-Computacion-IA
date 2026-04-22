@@ -1,0 +1,282 @@
+{
+  "data": [
+    {"id":1,"categoria":"historia","pregunta":"¿Qué es la computación?","respuesta":"Es la disciplina que estudia el procesamiento automático de información mediante computadoras.","keywords":["computacion"]},
+    {"id":2,"categoria":"historia","pregunta":"¿Qué es una computadora?","respuesta":"Es un dispositivo electrónico capaz de procesar datos siguiendo instrucciones.","keywords":["computadora"]},
+    {"id":3,"categoria":"historia","pregunta":"Definí computadora","respuesta":"Una computadora es una máquina que procesa datos y ejecuta instrucciones.","keywords":["computadora"]},
+    {"id":4,"categoria":"historia","pregunta":"¿Para qué sirve una computadora?","respuesta":"Sirve para procesar información, ejecutar programas y resolver problemas.","keywords":["computadora"]},
+
+    {"id":5,"categoria":"historia","pregunta":"¿Quién fue Charles Babbage?","respuesta":"Fue un matemático que diseñó la máquina analítica.","keywords":["babbage"]},
+    {"id":6,"categoria":"historia","pregunta":"¿Qué hizo Babbage?","respuesta":"Diseñó el concepto de computadora programable.","keywords":["babbage"]},
+
+    {"id":7,"categoria":"historia","pregunta":"¿Quién fue Ada Lovelace?","respuesta":"Fue la primera programadora de la historia.","keywords":["adalovelace"]},
+    {"id":8,"categoria":"historia","pregunta":"¿Qué hizo Ada Lovelace?","respuesta":"Escribió el primer algoritmo para una máquina.","keywords":["adalovelace"]},
+
+    {"id":9,"categoria":"historia","pregunta":"¿Quién fue Alan Turing?","respuesta":"Fue un matemático clave en la computación moderna.","keywords":["turing"]},
+    {"id":10,"categoria":"historia","pregunta":"¿Qué es la máquina de Turing?","respuesta":"Es un modelo teórico de computación.","keywords":["turing"]},
+    {"id":11,"categoria":"historia","pregunta":"¿Qué es el test de Turing?","respuesta":"Es una prueba para evaluar si una máquina puede imitar inteligencia humana.","keywords":["turing"]},
+
+    {"id":12,"categoria":"historia","pregunta":"¿Qué fue ENIAC?","respuesta":"Una de las primeras computadoras electrónicas de propósito general.","keywords":["eniac"]},
+    {"id":13,"categoria":"historia","pregunta":"¿Qué fue Colossus?","respuesta":"Computadora usada en la Segunda Guerra Mundial.","keywords":["colossus"]},
+
+    {"id":14,"categoria":"hardware","pregunta":"¿Qué es hardware?","respuesta":"Son los componentes físicos de una computadora.","keywords":["hardware"]},
+    {"id":15,"categoria":"software","pregunta":"¿Qué es software?","respuesta":"Son los programas que ejecuta una computadora.","keywords":["software"]},
+
+    {"id":16,"categoria":"hardware","pregunta":"¿Qué es la CPU?","respuesta":"Es la unidad central de procesamiento.","keywords":["cpu"]},
+    {"id":17,"categoria":"hardware","pregunta":"¿Qué es un microprocesador?","respuesta":"Es un chip que contiene la CPU.","keywords":["cpu"]},
+
+    {"id":18,"categoria":"software","pregunta":"¿Qué es un sistema operativo?","respuesta":"Es el software que gestiona el hardware.","keywords":["os"]},
+    {"id":19,"categoria":"software","pregunta":"¿Qué hace un sistema operativo?","respuesta":"Administra recursos y permite ejecutar programas.","keywords":["os"]},
+
+    {"id":20,"categoria":"software","pregunta":"¿Qué es un lenguaje de programación?","respuesta":"Lenguaje para escribir instrucciones.","keywords":["lenguaje"]},
+    {"id":21,"categoria":"software","pregunta":"¿Qué es programar?","respuesta":"Escribir instrucciones para una computadora.","keywords":["programar"]},
+
+    {"id":22,"categoria":"software","pregunta":"¿Qué es Python?","respuesta":"Lenguaje popular en IA.","keywords":["python"]},
+    {"id":23,"categoria":"software","pregunta":"¿Qué es Java?","respuesta":"Lenguaje orientado a objetos.","keywords":["java"]},
+    {"id":24,"categoria":"software","pregunta":"¿Qué es C?","respuesta":"Lenguaje base de muchos sistemas.","keywords":["c"]},
+
+    {"id":25,"categoria":"ia","pregunta":"¿Qué es inteligencia artificial?","respuesta":"Tecnología que imita inteligencia humana.","keywords":["ia"]},
+    {"id":26,"categoria":"ia","pregunta":"Definí inteligencia artificial","respuesta":"Disciplina que desarrolla sistemas inteligentes.","keywords":["ia"]},
+
+    {"id":27,"categoria":"ia","pregunta":"¿Qué es machine learning?","respuesta":"IA que aprende de datos.","keywords":["ml"]},
+    {"id":28,"categoria":"ia","pregunta":"¿Qué es deep learning?","respuesta":"Uso de redes neuronales profundas.","keywords":["dl"]},
+
+    {"id":29,"categoria":"ia","pregunta":"¿Qué es una red neuronal?","respuesta":"Modelo inspirado en el cerebro.","keywords":["red"]},
+    {"id":30,"categoria":"ia","pregunta":"¿Para qué sirven las redes neuronales?","respuesta":"Para reconocer patrones en datos.","keywords":["red"]},
+
+    {"id":31,"categoria":"ia","pregunta":"¿Qué es NLP?","respuesta":"Procesamiento de lenguaje natural.","keywords":["nlp"]},
+    {"id":32,"categoria":"ia","pregunta":"¿Qué es un chatbot?","respuesta":"Sistema que conversa con humanos.","keywords":["chatbot"]},
+
+    {"id":33,"categoria":"ia","pregunta":"¿Qué es un LLM?","respuesta":"Modelo de lenguaje grande.","keywords":["llm"]},
+    {"id":34,"categoria":"ia","pregunta":"¿Qué es un prompt?","respuesta":"Texto de entrada para IA.","keywords":["prompt"]},
+
+    {"id":35,"categoria":"datos","pregunta":"¿Qué es un dataset?","respuesta":"Conjunto de datos.","keywords":["dataset"]},
+    {"id":36,"categoria":"datos","pregunta":"¿Qué es JSON?","respuesta":"Formato de datos estructurado.","keywords":["json"]},
+
+    {"id":37,"categoria":"datos","pregunta":"¿Qué es CSV?","respuesta":"Archivo separado por comas.","keywords":["csv"]},
+    {"id":38,"categoria":"datos","pregunta":"¿Qué es Big Data?","respuesta":"Datos masivos.","keywords":["bigdata"]},
+
+    {"id":39,"categoria":"datos","pregunta":"¿Qué es un vector?","respuesta":"Lista de números.","keywords":["vector"]},
+    {"id":40,"categoria":"datos","pregunta":"¿Qué es embedding?","respuesta":"Representación numérica de texto.","keywords":["embedding"]},
+
+    {"id":41,"categoria":"historia","pregunta":"¿Qué es internet?","respuesta":"Red global.","keywords":["internet"]},
+    {"id":42,"categoria":"historia","pregunta":"¿Qué es la web?","respuesta":"Sistema de páginas en internet.","keywords":["web"]},
+
+    {"id":43,"categoria":"software","pregunta":"¿Qué es HTML?","respuesta":"Lenguaje de páginas web.","keywords":["html"]},
+    {"id":44,"categoria":"software","pregunta":"¿Qué es una API?","respuesta":"Interfaz de comunicación entre sistemas.","keywords":["api"]},
+
+    {"id":45,"categoria":"ia","pregunta":"¿Qué es visión por computadora?","respuesta":"IA que analiza imágenes.","keywords":["vision"]},
+    {"id":46,"categoria":"ia","pregunta":"¿Qué es robótica?","respuesta":"IA aplicada a máquinas físicas.","keywords":["robot"]},
+
+    {"id":47,"categoria":"ia","pregunta":"¿Qué es GPT?","respuesta":"Modelo de lenguaje basado en transformers.","keywords":["gpt"]},
+    {"id":48,"categoria":"ia","pregunta":"¿Qué es un token?","respuesta":"Unidad de texto en IA.","keywords":["token"]},
+
+    {"id":49,"categoria":"ia","pregunta":"¿Qué es ética en IA?","respuesta":"Uso responsable de IA.","keywords":["etica"]},
+    {"id":50,"categoria":"ia","pregunta":"¿Qué es sesgo en IA?","respuesta":"Errores por datos.","keywords":["bias"]},
+
+    {"id":51,"categoria":"historia","pregunta":"¿Qué son generaciones de computadoras?","respuesta":"Etapas evolutivas.","keywords":["generaciones"]},
+    {"id":52,"categoria":"historia","pregunta":"¿Cuántas generaciones hay?","respuesta":"Cinco.","keywords":["generaciones"]},
+
+    
+    {"id":53,"categoria":"historia","pregunta":"Explicá qué es computación","respuesta":"Es el procesamiento automático de información.","keywords":["computacion"]},
+    {"id":54,"categoria":"historia","pregunta":"¿Qué hace una computadora?","respuesta":"Procesa datos.","keywords":["computadora"]},
+    {"id":55,"categoria":"historia","pregunta":"¿Qué significa computar?","respuesta":"Procesar información.","keywords":["computar"]},
+
+    {"id":56,"categoria":"ia","pregunta":"¿Qué hace la IA?","respuesta":"Automatiza tareas inteligentes.","keywords":["ia"]},
+    {"id":57,"categoria":"ia","pregunta":"¿Para qué sirve la IA?","respuesta":"Para resolver problemas complejos.","keywords":["ia"]},
+    {"id":58,"categoria":"ia","pregunta":"Aplicaciones de IA","respuesta":"Chatbots, visión, recomendación.","keywords":["ia"]},
+
+    {"id":59,"categoria":"ia","pregunta":"¿Qué es aprendizaje supervisado?","respuesta":"Aprende con datos etiquetados.","keywords":["ml"]},
+    {"id":60,"categoria":"ia","pregunta":"¿Qué es aprendizaje no supervisado?","respuesta":"Aprende sin etiquetas.","keywords":["ml"]},
+
+    {"id":61,"categoria":"hardware","pregunta":"¿Qué es memoria RAM?","respuesta":"Memoria temporal.","keywords":["ram"]},
+    {"id":62,"categoria":"hardware","pregunta":"¿Qué es almacenamiento?","respuesta":"Donde se guardan datos.","keywords":["storage"]},
+
+    {"id":63,"categoria":"software","pregunta":"¿Qué es backend?","respuesta":"Parte lógica del sistema.","keywords":["backend"]},
+    {"id":64,"categoria":"software","pregunta":"¿Qué es frontend?","respuesta":"Interfaz de usuario.","keywords":["frontend"]},
+
+    {"id":65,"categoria":"ia","pregunta":"¿Qué es inferencia en IA?","respuesta":"Uso del modelo entrenado.","keywords":["ia"]},
+    {"id":66,"categoria":"ia","pregunta":"¿Qué es entrenamiento en IA?","respuesta":"Proceso de aprendizaje del modelo.","keywords":["ia"]},
+
+    {"id":67,"categoria":"datos","pregunta":"¿Qué es base de datos?","respuesta":"Sistema de almacenamiento de datos.","keywords":["db"]},
+    {"id":68,"categoria":"datos","pregunta":"¿Qué es SQL?","respuesta":"Lenguaje de bases de datos.","keywords":["sql"]},
+
+    {"id":69,"categoria":"ia","pregunta":"¿Qué es automatización?","respuesta":"Uso de máquinas para tareas.","keywords":["auto"]},
+    {"id":70,"categoria":"ia","pregunta":"¿Qué es analítica?","respuesta":"Interpretación de datos.","keywords":["data"]},
+
+    {"id":71,"categoria":"ia","pregunta":"¿Qué es ciencia de datos?","respuesta":"Disciplina de análisis de datos.","keywords":["ds"]},
+    {"id":72,"categoria":"ia","pregunta":"¿Qué es un modelo?","respuesta":"Representación matemática.","keywords":["modelo"]},
+
+    
+    {"id":73,"categoria":"ia","pregunta":"Explicá machine learning","respuesta":"Aprendizaje automático basado en datos.","keywords":["ml"]},
+    {"id":74,"categoria":"ia","pregunta":"Definí deep learning","respuesta":"Redes neuronales profundas.","keywords":["dl"]},
+    {"id":75,"categoria":"ia","pregunta":"¿Qué son modelos predictivos?","respuesta":"Modelos que predicen resultados.","keywords":["ml"]},
+
+    {"id":76,"categoria":"historia","pregunta":"¿Cuándo nació la computación?","respuesta":"Siglo XIX con Babbage.","keywords":["historia"]},
+    {"id":77,"categoria":"historia","pregunta":"¿Qué marcó el inicio de IA?","respuesta":"Conferencia Dartmouth 1956.","keywords":["ia"]},
+
+    {"id":78,"categoria":"ia","pregunta":"¿Qué es Dartmouth?","respuesta":"Evento fundacional de IA.","keywords":["ia"]},
+    {"id":79,"categoria":"ia","pregunta":"¿Qué pasó en 1956?","respuesta":"Nacimiento formal de IA.","keywords":["ia"]},
+
+    {"id":80,"categoria":"ia","pregunta":"¿Qué es un agente inteligente?","respuesta":"Sistema que percibe y actúa.","keywords":["ia"]},
+
+    
+    {"id":81,"categoria":"ia","pregunta":"¿Qué es un algoritmo?","respuesta":"Conjunto de pasos para resolver problemas.","keywords":["algoritmo"]},
+    {"id":82,"categoria":"ia","pregunta":"Definí algoritmo","respuesta":"Secuencia de instrucciones.","keywords":["algoritmo"]},
+
+    {"id":83,"categoria":"hardware","pregunta":"¿Qué es GPU?","respuesta":"Procesador gráfico.","keywords":["gpu"]},
+    {"id":84,"categoria":"hardware","pregunta":"¿Para qué sirve GPU?","respuesta":"Procesar gráficos y IA.","keywords":["gpu"]},
+
+    {"id":85,"categoria":"ia","pregunta":"¿Qué es transformers?","respuesta":"Arquitectura de modelos modernos.","keywords":["ia"]},
+    {"id":86,"categoria":"ia","pregunta":"¿Para qué sirven transformers?","respuesta":"Procesar lenguaje natural.","keywords":["ia"]},
+
+    {"id":87,"categoria":"ia","pregunta":"¿Qué es overfitting?","respuesta":"Modelo que memoriza.","keywords":["ml"]},
+    {"id":88,"categoria":"ia","pregunta":"¿Qué es underfitting?","respuesta":"Modelo que no aprende.","keywords":["ml"]},
+
+    {"id":89,"categoria":"ia","pregunta":"¿Qué es validación?","respuesta":"Evaluar modelo.","keywords":["ml"]},
+    {"id":90,"categoria":"ia","pregunta":"¿Qué es testeo?","respuesta":"Prueba final del modelo.","keywords":["ml"]},
+
+    
+    {"id":91,"categoria":"ia","pregunta":"¿Qué es accuracy?","respuesta":"Precisión del modelo.","keywords":["ml"]},
+    {"id":92,"categoria":"ia","pregunta":"¿Qué es precisión?","respuesta":"Exactitud de predicción.","keywords":["ml"]},
+
+    {"id":93,"categoria":"ia","pregunta":"¿Qué es recall?","respuesta":"Capacidad de detectar positivos.","keywords":["ml"]},
+    {"id":94,"categoria":"ia","pregunta":"¿Qué es F1 score?","respuesta":"Media de precisión y recall.","keywords":["ml"]},
+
+    {"id":95,"categoria":"ia","pregunta":"¿Qué es clustering?","respuesta":"Agrupamiento de datos.","keywords":["ml"]},
+    {"id":96,"categoria":"ia","pregunta":"¿Qué es clasificación?","respuesta":"Asignar etiquetas.","keywords":["ml"]},
+
+    {"id":97,"categoria":"ia","pregunta":"¿Qué es regresión?","respuesta":"Predicción numérica.","keywords":["ml"]},
+    {"id":98,"categoria":"ia","pregunta":"¿Qué es feature?","respuesta":"Variable de datos.","keywords":["ml"]},
+
+    {"id":99,"categoria":"ia","pregunta":"¿Qué es feature engineering?","respuesta":"Creación de variables.","keywords":["ml"]},
+    {"id":100,"categoria":"ia","pregunta":"¿Qué es pipeline?","respuesta":"Flujo de procesamiento.","keywords":["ml"]},
+
+    
+    {"id":101,"categoria":"ia","pregunta":"¿Qué es inferencia en tiempo real?","respuesta":"Respuesta inmediata del modelo.","keywords":["ia"]},
+    {"id":102,"categoria":"ia","pregunta":"¿Qué es batch?","respuesta":"Procesamiento por lotes.","keywords":["ia"]},
+
+    {"id":103,"categoria":"ia","pregunta":"¿Qué es fine tuning?","respuesta":"Ajuste de modelo.","keywords":["ia"]},
+    {"id":104,"categoria":"ia","pregunta":"¿Qué es preentrenamiento?","respuesta":"Entrenamiento inicial.","keywords":["ia"]},
+
+    {"id":105,"categoria":"ia","pregunta":"¿Qué es dataset de entrenamiento?","respuesta":"Datos para entrenar.","keywords":["data"]},
+    {"id":106,"categoria":"ia","pregunta":"¿Qué es dataset de prueba?","respuesta":"Datos para evaluar.","keywords":["data"]},
+
+    {"id":107,"categoria":"ia","pregunta":"¿Qué es data labeling?","respuesta":"Etiquetado de datos.","keywords":["data"]},
+    {"id":108,"categoria":"ia","pregunta":"¿Qué es data cleaning?","respuesta":"Limpieza de datos.","keywords":["data"]},
+
+    {"id":109,"categoria":"ia","pregunta":"¿Qué es data augmentation?","respuesta":"Aumentar datos.","keywords":["data"]},
+    {"id":110,"categoria":"ia","pregunta":"¿Qué es feature scaling?","respuesta":"Escalar datos.","keywords":["data"]},
+
+    
+    {"id":111,"categoria":"ia","pregunta":"¿Qué es modelo supervisado?","respuesta":"Modelo con etiquetas.","keywords":["ml"]},
+    {"id":112,"categoria":"ia","pregunta":"¿Qué es modelo no supervisado?","respuesta":"Modelo sin etiquetas.","keywords":["ml"]},
+
+    {"id":113,"categoria":"ia","pregunta":"¿Qué es modelo semisupervisado?","respuesta":"Mezcla de ambos.","keywords":["ml"]},
+    {"id":114,"categoria":"ia","pregunta":"¿Qué es reinforcement learning?","respuesta":"Aprendizaje por recompensa.","keywords":["ml"]},
+
+    {"id":115,"categoria":"ia","pregunta":"¿Qué es reward?","respuesta":"Recompensa en RL.","keywords":["ml"]},
+    {"id":116,"categoria":"ia","pregunta":"¿Qué es política en RL?","respuesta":"Estrategia del agente.","keywords":["ml"]},
+
+    {"id":117,"categoria":"ia","pregunta":"¿Qué es entorno en RL?","respuesta":"Contexto del agente.","keywords":["ml"]},
+    {"id":118,"categoria":"ia","pregunta":"¿Qué es estado?","respuesta":"Situación actual.","keywords":["ml"]},
+
+    {"id":119,"categoria":"ia","pregunta":"¿Qué es acción?","respuesta":"Decisión del agente.","keywords":["ml"]},
+    {"id":120,"categoria":"ia","pregunta":"¿Qué es episodio?","respuesta":"Secuencia en RL.","keywords":["ml"]},
+
+    
+    {"id":121,"categoria":"ia","pregunta":"¿Qué es bias en modelos?","respuesta":"Error sistemático.","keywords":["ml"]},
+    {"id":122,"categoria":"ia","pregunta":"¿Qué es varianza?","respuesta":"Variabilidad del modelo.","keywords":["ml"]},
+
+    {"id":123,"categoria":"ia","pregunta":"¿Qué es tradeoff bias-varianza?","respuesta":"Balance entre ambos.","keywords":["ml"]},
+    {"id":124,"categoria":"ia","pregunta":"¿Qué es regularización?","respuesta":"Evitar overfitting.","keywords":["ml"]},
+
+    {"id":125,"categoria":"ia","pregunta":"¿Qué es dropout?","respuesta":"Técnica de regularización.","keywords":["ml"]},
+    {"id":126,"categoria":"ia","pregunta":"¿Qué es batch size?","respuesta":"Cantidad de datos por iteración.","keywords":["ml"]},
+
+    {"id":127,"categoria":"ia","pregunta":"¿Qué es epoch?","respuesta":"Ciclo completo de entrenamiento.","keywords":["ml"]},
+    {"id":128,"categoria":"ia","pregunta":"¿Qué es learning rate?","respuesta":"Velocidad de aprendizaje.","keywords":["ml"]},
+
+    {"id":129,"categoria":"ia","pregunta":"¿Qué es optimizer?","respuesta":"Algoritmo de ajuste.","keywords":["ml"]},
+    {"id":130,"categoria":"ia","pregunta":"¿Qué es loss function?","respuesta":"Función de error.","keywords":["ml"]},
+
+    
+    {"id":131,"categoria":"ia","pregunta":"¿Qué es backpropagation?","respuesta":"Algoritmo de entrenamiento.","keywords":["ml"]},
+    {"id":132,"categoria":"ia","pregunta":"¿Qué es gradiente?","respuesta":"Dirección de cambio.","keywords":["ml"]},
+
+    {"id":133,"categoria":"ia","pregunta":"¿Qué es descenso de gradiente?","respuesta":"Optimización.","keywords":["ml"]},
+    {"id":134,"categoria":"ia","pregunta":"¿Qué es convergencia?","respuesta":"Estabilización del modelo.","keywords":["ml"]},
+
+    {"id":135,"categoria":"ia","pregunta":"¿Qué es generalización?","respuesta":"Capacidad de adaptarse.","keywords":["ml"]},
+    {"id":136,"categoria":"ia","pregunta":"¿Qué es dataset balanceado?","respuesta":"Clases equilibradas.","keywords":["ml"]},
+
+    {"id":137,"categoria":"ia","pregunta":"¿Qué es dataset desbalanceado?","respuesta":"Clases desiguales.","keywords":["ml"]},
+    {"id":138,"categoria":"ia","pregunta":"¿Qué es sampling?","respuesta":"Selección de datos.","keywords":["ml"]},
+
+    {"id":139,"categoria":"ia","pregunta":"¿Qué es cross validation?","respuesta":"Validación cruzada.","keywords":["ml"]},
+    {"id":140,"categoria":"ia","pregunta":"¿Qué es grid search?","respuesta":"Búsqueda de parámetros.","keywords":["ml"]},
+
+    
+    {"id":141,"categoria":"ia","pregunta":"¿Qué es hiperparámetro?","respuesta":"Parámetro configurable.","keywords":["ml"]},
+    {"id":142,"categoria":"ia","pregunta":"¿Qué es tuning?","respuesta":"Optimización de parámetros.","keywords":["ml"]},
+
+    {"id":143,"categoria":"ia","pregunta":"¿Qué es modelo baseline?","respuesta":"Modelo simple inicial.","keywords":["ml"]},
+    {"id":144,"categoria":"ia","pregunta":"¿Qué es benchmark?","respuesta":"Referencia de comparación.","keywords":["ml"]},
+
+    {"id":145,"categoria":"ia","pregunta":"¿Qué es dataset público?","respuesta":"Datos abiertos.","keywords":["data"]},
+    {"id":146,"categoria":"ia","pregunta":"¿Qué es dataset privado?","respuesta":"Datos restringidos.","keywords":["data"]},
+
+    {"id":147,"categoria":"ia","pregunta":"¿Qué es anonimización?","respuesta":"Ocultar identidad.","keywords":["data"]},
+    {"id":148,"categoria":"ia","pregunta":"¿Qué es privacidad?","respuesta":"Protección de datos.","keywords":["data"]},
+
+    {"id":149,"categoria":"ia","pregunta":"¿Qué es seguridad en IA?","respuesta":"Protección de modelos.","keywords":["ia"]},
+    {"id":150,"categoria":"ia","pregunta":"¿Qué es adversarial attack?","respuesta":"Ataque a modelos.","keywords":["ia"]},
+
+    
+    {"id":151,"categoria":"ia","pregunta":"¿Qué es explainability?","respuesta":"Explicabilidad de modelos.","keywords":["ia"]},
+    {"id":152,"categoria":"ia","pregunta":"¿Qué es interpretabilidad?","respuesta":"Comprensión del modelo.","keywords":["ia"]},
+
+    {"id":153,"categoria":"ia","pregunta":"¿Qué es fairness?","respuesta":"Equidad en IA.","keywords":["ia"]},
+    {"id":154,"categoria":"ia","pregunta":"¿Qué es transparencia?","respuesta":"Claridad del modelo.","keywords":["ia"]},
+
+    {"id":155,"categoria":"ia","pregunta":"¿Qué es automatización inteligente?","respuesta":"Automatización con IA.","keywords":["ia"]},
+    {"id":156,"categoria":"ia","pregunta":"¿Qué es industria 4.0?","respuesta":"Automatización industrial.","keywords":["ia"]},
+
+    {"id":157,"categoria":"ia","pregunta":"¿Qué es IoT?","respuesta":"Internet de las cosas.","keywords":["iot"]},
+    {"id":158,"categoria":"ia","pregunta":"¿Qué es edge computing?","respuesta":"Procesamiento local.","keywords":["edge"]},
+
+    {"id":159,"categoria":"ia","pregunta":"¿Qué es cloud AI?","respuesta":"IA en la nube.","keywords":["cloud"]},
+    {"id":160,"categoria":"ia","pregunta":"¿Qué es MLOps?","respuesta":"Operaciones de ML.","keywords":["mlops"]},
+
+    
+    {"id":161,"categoria":"ia","pregunta":"¿Qué es pipeline de datos?","respuesta":"Flujo de datos.","keywords":["data"]},
+    {"id":162,"categoria":"ia","pregunta":"¿Qué es ETL?","respuesta":"Extracción transformación carga.","keywords":["etl"]},
+
+    {"id":163,"categoria":"ia","pregunta":"¿Qué es data warehouse?","respuesta":"Almacén de datos.","keywords":["data"]},
+    {"id":164,"categoria":"ia","pregunta":"¿Qué es data lake?","respuesta":"Repositorio de datos.","keywords":["data"]},
+
+    {"id":165,"categoria":"ia","pregunta":"¿Qué es dashboard?","respuesta":"Visualización de datos.","keywords":["data"]},
+    {"id":166,"categoria":"ia","pregunta":"¿Qué es BI?","respuesta":"Business Intelligence.","keywords":["data"]},
+
+    {"id":167,"categoria":"ia","pregunta":"¿Qué es analítica descriptiva?","respuesta":"Describe datos.","keywords":["data"]},
+    {"id":168,"categoria":"ia","pregunta":"¿Qué es analítica predictiva?","respuesta":"Predice datos.","keywords":["data"]},
+
+    {"id":169,"categoria":"ia","pregunta":"¿Qué es analítica prescriptiva?","respuesta":"Sugiere acciones.","keywords":["data"]},
+    {"id":170,"categoria":"ia","pregunta":"¿Qué es storytelling con datos?","respuesta":"Comunicar insights.","keywords":["data"]},
+
+    
+    {"id":171,"categoria":"ia","pregunta":"¿Qué es automatización robótica RPA?","respuesta":"Automatización de procesos.","keywords":["rpa"]},
+    {"id":172,"categoria":"ia","pregunta":"¿Qué es chatbot conversacional?","respuesta":"Chatbot avanzado.","keywords":["chatbot"]},
+
+    {"id":173,"categoria":"ia","pregunta":"¿Qué es voice assistant?","respuesta":"Asistente de voz.","keywords":["ia"]},
+    {"id":174,"categoria":"ia","pregunta":"¿Qué es reconocimiento de voz?","respuesta":"IA que entiende audio.","keywords":["ia"]},
+
+    {"id":175,"categoria":"ia","pregunta":"¿Qué es síntesis de voz?","respuesta":"IA que genera voz.","keywords":["ia"]},
+    {"id":176,"categoria":"ia","pregunta":"¿Qué es recomendación?","respuesta":"Sistemas de sugerencias.","keywords":["ia"]},
+
+    {"id":177,"categoria":"ia","pregunta":"¿Qué es personalización?","respuesta":"Adaptación al usuario.","keywords":["ia"]},
+    {"id":178,"categoria":"ia","pregunta":"¿Qué es segmentación?","respuesta":"Dividir usuarios.","keywords":["data"]},
+
+    {"id":179,"categoria":"ia","pregunta":"¿Qué es detección de fraude?","respuesta":"Identificar anomalías.","keywords":["ia"]},
+    {"id":180,"categoria":"ia","pregunta":"¿Qué es predicción?","respuesta":"Estimación futura.","keywords":["ia"]}
+  ]
+}
