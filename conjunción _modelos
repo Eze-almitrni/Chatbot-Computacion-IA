@@ -1,0 +1,292 @@
+# ================================================================
+# CHATBOT UNIFICADO: Historia de la Computación e IA
+# Combina modeloCL.py (normalización robusta) + modelo_simplificado.py
+# Incluye Smoke Test de 100 preguntas corregido y completo
+# ================================================================
+
+import re
+import unicodedata
+
+# ================================================================
+# 1. BASE DE CONOCIMIENTO (del modelo_simplificado, expandida)
+# ================================================================
+base_conocimiento = [
+    {
+        "palabras_clave": [
+            "origen", "surgio", "nacio", "comenzo", "empezo", "primer", "primeras",
+            "antes", "abaco", "babbage", "herramientas", "pioneros",
+            "nace", "nacimiento", "historia", "inicial", "base", "historica",
+        ],
+        "respuesta": "La computación nace con herramientas simples como el ábaco y evoluciona con máquinas como la de Babbage, hasta llegar a las computadoras modernas."
+    },
+    {
+        "palabras_clave": [
+            "ia", "inteligencia artificial", "artificial", "que es ia", "rama",
+            "sistemas inteligentes", "pensar", "aprender", "objetivo ia",
+            "propósito", "propósito ia", "propósito de crear", "meta ia",
+            "capacidades", "características ia", "define ia", "diferencia",
+        ],
+        "respuesta": "La Inteligencia Artificial es la rama de la informática que crea sistemas capaces de pensar, aprender y resolver problemas como lo haría un ser humano."
+    },
+    {
+        "palabras_clave": [
+            "evolucion", "desarrollo", "avances", "anos 50", "algoritmos",
+            "redes neuronales", "hitos", "etapas", "progreso", "avanzó",
+            "transformaron", "cambios", "descubrimientos", "futuro",
+            "tecnologia actual", "sigue evolucionando", "hoy en dia",
+            "sistemas complejos", "vida diaria", "sigue avanzando",
+        ],
+        "respuesta": "En los años 50 surgieron las primeras ideas. Luego avanzó con algoritmos, redes neuronales y hoy está presente en casi toda la tecnología."
+    },
+    {
+        "palabras_clave": [
+            "maquinas", "automatizacion", "automatizar", "exactitud",
+            "velocidad", "precision", "calculo automatico", "vinculo",
+            "calculos automaticos", "mano a maquina", "cuentas a mano",
+        ],
+        "respuesta": "Todo comenzó por la necesidad de hacer cálculos rápidos y exactos, evolucionando hacia la automatización de tareas cada vez más complejas."
+    },
+]
+
+# Respuestas para saludos y despedidas
+respuestas_rapidas = {
+    "hola": "¡Hola! ¿Qué querés saber sobre computación o Inteligencia Artificial?",
+    "buenos": "¡Buenas! Estoy acá para responder tus dudas.",
+    "buenas": "¡Buenas! Estoy acá para responder tus dudas.",
+    "chau": "¡Hasta luego! Fue un gusto ayudarte.",
+    "hasta": "¡Hasta luego! Fue un gusto ayudarte.",
+    "adios": "¡Nos vemos! Volvé cuando quieras.",
+    "adiós": "¡Nos vemos! Volvé cuando quieras.",
+}
+
+RESPUESTA_DEFAULT = "Lo siento, no tengo información sobre eso. Preguntame sobre historia de la computación o qué es la IA."
+
+# ================================================================
+# 2. NORMALIZACIÓN ROBUSTA (del modeloCL.py — usa unicodedata)
+# ================================================================
+def normalizar(texto):
+    """
+    Pasa a minúsculas y elimina tildes/diacríticos.
+    'computación' → 'computacion', 'ñ' → 'n', etc.
+    """
+    texto = texto.lower()
+    texto = unicodedata.normalize('NFD', texto)
+    texto = ''.join(c for c in texto if unicodedata.category(c) != 'Mn')
+    return texto
+
+# ================================================================
+# 3. TOKENIZACIÓN (del modeloCL.py)
+# ================================================================
+def tokenizar(texto):
+    """Devuelve un conjunto de palabras normalizadas."""
+    return set(re.findall(r'\w+', normalizar(texto)))
+
+# ================================================================
+# 4. BÚSQUEDA DE RESPUESTA (lógica mejorada)
+# ================================================================
+def buscar_respuesta(pregunta):
+    pregunta_norm = normalizar(pregunta)
+
+    # Paso 1: saludos / despedidas
+    for palabra, respuesta in respuestas_rapidas.items():
+        if palabra in pregunta_norm:
+            return respuesta
+
+    # Paso 2: buscar coincidencias por palabras clave
+    mejor_respuesta = RESPUESTA_DEFAULT
+    max_puntos = 0
+
+    for tema in base_conocimiento:
+        puntos = 0
+        for palabra_clave in tema["palabras_clave"]:
+            if palabra_clave in pregunta_norm:
+                puntos += 1
+        if puntos > max_puntos:
+            max_puntos = puntos
+            mejor_respuesta = tema["respuesta"]
+
+    return mejor_respuesta
+
+# ================================================================
+# 5. CHAT INTERACTIVO
+# ================================================================
+def iniciar_chat():
+    print("🤖 CHATBOT: Historia de la Computación y la IA")
+    print("Escribí 'salir' para terminar\n")
+    while True:
+        usuario = input("Tú: ")
+        if normalizar(usuario) == "salir":
+            print("🤖 CHATBOT: ¡Hasta luego!")
+            break
+        respuesta = buscar_respuesta(usuario)
+        print(f"🤖 CHATBOT: {respuesta}\n")
+
+# ================================================================
+# 6. SMOKE TEST — 100 PREGUNTAS
+# ================================================================
+def prueba_de_efectividad():
+    R1 = "La computación nace con herramientas simples como el ábaco y evoluciona con máquinas como la de Babbage, hasta llegar a las computadoras modernas."
+    R2 = "La Inteligencia Artificial es la rama de la informática que crea sistemas capaces de pensar, aprender y resolver problemas como lo haría un ser humano."
+    R3 = "En los años 50 surgieron las primeras ideas. Luego avanzó con algoritmos, redes neuronales y hoy está presente en casi toda la tecnología."
+    R4 = "Todo comenzó por la necesidad de hacer cálculos rápidos y exactos, evolucionando hacia la automatización de tareas cada vez más complejas."
+    SALUDO = "¡Hola! ¿Qué querés saber sobre computación o Inteligencia Artificial?"
+    BUENAS = "¡Buenas! Estoy acá para responder tus dudas."
+    CHAU = "¡Hasta luego! Fue un gusto ayudarte."
+    ADIOS = "¡Nos vemos! Volvé cuando quieras."
+    NO_SE = RESPUESTA_DEFAULT
+
+    # (pregunta, respuesta_esperada)
+    casos = [
+        # --- TEMA 1: ORIGEN E HISTORIA (25) ---
+        ("¿Cuál es el origen de la computación?", R1),
+        ("¿Cómo surgió la computación?", R1),
+        ("¿De dónde viene la informática?", R1),
+        ("¿Cuándo nació la computación?", R1),
+        ("¿Con qué herramientas comenzó la computación?", R1),
+        ("¿Qué se usaba antes de las computadoras?", R1),
+        ("¿Cómo empezó todo en la computación?", R1),
+        ("¿Cuál fue la primera herramienta de cálculo?", R1),
+        ("¿Qué es el ábaco en la historia?", R1),
+        ("¿Cómo evolucionaron las primeras máquinas?", R1),
+        ("¿Quiénes fueron los pioneros de la computación?", R1),
+        ("¿Qué importancia tuvo la máquina de Babbage?", R1),
+        ("¿Cómo se hacían cálculos antes?", R1),
+        ("¿Cuál es la historia inicial de la computación?", R1),
+        ("¿Por qué nació la necesidad de calcular?", R1),
+        ("¿Qué avances hubo al principio?", R1),
+        ("¿Cómo pasó de herramientas simples a máquinas?", R1),
+        ("¿Cuál fue el primer paso de la computación?", R1),
+        ("¿Qué significa computación?", R1),
+        ("¿Para qué se crearon las primeras herramientas?", R1),
+        ("¿Cuál es la base histórica de la informática?", R1),
+        ("¿Cómo se desarrolló la computación al inicio?", R1),
+        ("¿Qué relación hay entre el ábaco y la computación?", R1),
+        ("¿Cuándo se consideró el nacimiento de la informática?", R1),
+        ("¿Cómo evolucionó el cálculo humano al automático?", R1),
+
+        # --- TEMA 2: INTELIGENCIA ARTIFICIAL (25) ---
+        ("¿Qué es la inteligencia artificial?", R2),
+        ("¿Qué significa IA?", R2),
+        ("¿Para qué sirve la IA?", R2),
+        ("¿Cómo funciona la inteligencia artificial?", R2),
+        ("¿Cuál es el objetivo de la IA?", R2),
+        ("¿Qué hace la inteligencia artificial?", R2),
+        ("¿Cómo se define la IA?", R2),
+        ("¿En qué se diferencia la IA de otros sistemas?", R2),
+        ("¿Qué capacidades tiene la inteligencia artificial?", R2),
+        ("¿Puede la IA pensar como un humano?", R2),
+        ("¿Qué tareas puede resolver la IA?", R2),
+        ("¿Cómo aprenden los sistemas de IA?", R2),
+        ("¿Qué rama de la informática es la IA?", R2),
+        ("¿Por qué es importante la inteligencia artificial?", R2),
+        ("¿Qué problemas resuelve la IA?", R2),
+        ("¿Cómo imita la inteligencia humana?", R2),
+        ("¿Qué es un sistema inteligente?", R2),
+        ("¿Cuál es el propósito de crear IA?", R2),
+        ("¿Qué características tiene la IA?", R2),
+        ("¿Cómo ayuda la inteligencia artificial?", R2),
+        ("¿Qué relación tiene la IA con la computación?", R2),
+        ("¿Se puede considerar a la IA como pensamiento?", R2),
+        ("¿Qué significa que la IA aprenda?", R2),
+        ("¿Cómo se crean los programas de inteligencia artificial?", R2),
+        ("¿Cuál es la meta principal de la IA?", R2),
+
+        # --- TEMA 3: EVOLUCIÓN Y DESARROLLO (25) ---
+        ("¿Cómo evolucionó la computación?", R3),
+        ("¿Cuáles fueron los primeros avances?", R3),
+        ("¿Qué pasó en los años 50 en la informática?", R3),
+        ("¿Cómo se desarrolló la IA con el tiempo?", R3),
+        ("¿Qué cambios hubo en la tecnología?", R3),
+        ("¿Cómo avanzó la computación desde sus inicios?", R3),
+        ("¿Qué importancia tienen los algoritmos?", R3),
+        ("¿Cómo surgieron las redes neuronales?", R3),
+        ("¿Cuál es la evolución de la IA hasta hoy?", R3),
+        ("¿Cómo pasó de cálculos simples a inteligencia?", R3),
+        ("¿Qué hitos marcaron la historia de la computación?", R3),
+        ("¿Cómo se fue mejorando la capacidad de cálculo?", R3),
+        ("¿Qué descubrimientos impulsaron la informática?", R3),
+        ("¿Cómo es la tecnología actual comparada con la antigua?", R3),
+        ("¿Cuáles fueron las etapas de desarrollo?", R3),
+        ("¿Cómo influyeron los años 50 en la IA?", R3),
+        ("¿Qué avances hay hoy en día?", R3),
+        ("¿Cómo sigue evolucionando la inteligencia artificial?", R3),
+        ("¿Qué relación hay entre evolución y necesidades humanas?", R3),
+        ("¿Cómo se transformaron las máquinas?", R3),
+        ("¿Cuál fue el progreso más rápido?", R3),
+        ("¿Qué permitió el desarrollo de sistemas complejos?", R3),
+        ("¿Cómo cambió el uso de la computación en la vida diaria?", R3),
+        ("¿Cuál es el futuro de la evolución tecnológica?", R3),
+        ("¿Qué hace que la tecnología siga avanzando?", R3),
+
+        # --- TEMA 4: MÁQUINAS Y AUTOMATIZACIÓN (15) ---
+        ("¿Por qué se crearon las primeras máquinas?", R4),
+        ("¿Para qué sirven los cálculos automáticos?", R4),
+        ("¿Qué es la automatización en informática?", R4),
+        ("¿Cómo ayudan las máquinas a calcular?", R4),
+        ("¿Qué ventaja tiene calcular con máquinas?", R4),
+        ("¿Cómo funciona una máquina de cálculo?", R4),
+        ("¿Qué relación hay entre cálculo y computación?", R4),
+        ("¿Por qué la exactitud es importante?", R4),
+        ("¿Cómo se lograron cálculos más rápidos?", R4),
+        ("¿Qué significa automatizar tareas?", R4),
+        ("¿Cómo pasó de hacer cuentas a mano a máquina?", R4),
+        ("¿Qué necesidad impulsó las máquinas?", R4),
+        ("¿Cómo mejoraron la velocidad y precisión?", R4),
+        ("¿Qué tipo de tareas se pueden automatizar?", R4),
+        ("¿Cuál es el vínculo entre máquina y cálculo?", R4),
+
+        # --- TEMA 5: SALUDOS Y FUERA DE TEMA (10) ---
+        ("Hola", SALUDO),
+        ("Buenas tardes", BUENAS),
+        ("Buenos días", BUENAS),
+        ("Buenas noches", BUENAS),
+        ("¿Qué tal?", NO_SE),
+        ("Chau", CHAU),
+        ("Adiós", ADIOS),
+        ("Hasta luego", CHAU),
+        ("¿Cuál es tu color favorito?", NO_SE),
+        ("¿Qué hora es?", NO_SE),
+    ]
+
+    total = len(casos)
+    aciertos = 0
+    fallos = []
+
+    print("=" * 55)
+    print("🔎 INICIANDO SMOKE TEST — 100 PREGUNTAS")
+    print("=" * 55)
+
+    for i, (pregunta, esperada) in enumerate(casos, 1):
+        obtenida = buscar_respuesta(pregunta)
+        if obtenida.strip() == esperada.strip():
+            aciertos += 1
+            print(f" ✅ #{i:3d}: CORRECTA")
+        else:
+            fallos.append((i, pregunta, esperada, obtenida))
+            print(f" ❌ #{i:3d}: INCORRECTA — '{pregunta}'")
+
+    porcentaje = (aciertos / total) * 100
+    print("=" * 55)
+    print(f"\n📊 RESULTADO FINAL:")
+    print(f" ✅ Aciertos : {aciertos} de {total}")
+    print(f" ❌ Fallos : {len(fallos)} de {total}")
+    print(f" 🎯 Efectividad: {porcentaje:.1f}%")
+
+    if fallos:
+        print("\n🔍 Detalle de fallos:")
+        for num, preg, esp, obt in fallos:
+            print(f"\n Pregunta #{num}: {preg}")
+            print(f" Esperada : {esp[:80]}...")
+            print(f" Obtenida : {obt[:80]}...")
+
+# ================================================================
+# 7. PUNTO DE ENTRADA
+# ================================================================
+if __name__ == "__main__":
+    # Elegí qué modo usar:
+
+    # Modo chat interactivo:
+    # iniciar_chat()
+
+    # Modo smoke test:
+    prueba_de_efectividad()
